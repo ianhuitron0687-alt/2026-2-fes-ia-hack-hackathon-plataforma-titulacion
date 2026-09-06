@@ -1,0 +1,7 @@
+*.tmp
+*.bak
+*.kra
+.DS_Store
+Thumbs.db
+src/backend/uploads/*
+!src/backend/uploads/.gitkeep

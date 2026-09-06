@@ -29,9 +29,8 @@ if ($matricula === 'admin' && $contrasena === 'admin') {
 
 $mysqli = @new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 if ($mysqli->connect_error) {
-    // Fallback para pruebas locales si no hay BD disponible
-    // Acepta la credencial numérica de prueba antigua y también admin/admin para testing rápido
-    if (($matricula === '323332855' && $contrasena === '24092007') || ($matricula === 'admin' && $contrasena === 'admin')) {
+    // Fallback para pruebas locales si no hay BD disponible (modo offline/demo)
+    if (($matricula === 'demo' && $contrasena === 'demo123') || ($matricula === 'admin' && $contrasena === 'admin')) {
         echo json_encode(['success' => true, 'redirect' => '/frontendV2/chart.html']);
         exit;
     }
